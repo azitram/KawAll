@@ -10,34 +10,34 @@ class DetailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffFFFFFF),
+      backgroundColor: const Color(0xffFFFFFF),
       body: CustomScrollView(
           slivers: [
             SliverAppBar(
               toolbarHeight: 100,
               bottom: PreferredSize(
-                  preferredSize: Size.fromHeight(20),
+                  preferredSize: const Size.fromHeight(20),
                   child: Container(
-                      child: Center(child: Text(
-                          list.title,
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600,
-                          )
-                      )),
                       width: double.maxFinite,
-                      padding: EdgeInsets.only(top: 20, bottom: 20, right: 30, left: 30),
-                      decoration: BoxDecoration(
+                      padding: const EdgeInsets.only(top: 20, bottom: 20, right: 30, left: 30),
+                      decoration: const BoxDecoration(
                           color: Color(0xffFFFFFF),
                           borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(30),
                               topRight: Radius.circular(30)
                           )
-                      )
+                      ),
+                      child: Center(child: Text(
+                          list.title,
+                          style: const TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                          )
+                      ))
                   )
               ),
               pinned: true,
-              backgroundColor: Color(0xffEC9F87),
+              backgroundColor: const Color(0xffEC9F87),
               expandedHeight: 600,
               flexibleSpace: FlexibleSpaceBar(
                 background: Image.asset(
@@ -51,10 +51,10 @@ class DetailScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
-                      margin: EdgeInsets.all(20.0),
+                      margin: const EdgeInsets.all(20.0),
                       child: Text(
                         list.material,
-                        style: TextStyle(
+                        style: const TextStyle(
                           height: 1.7,
                           fontSize: 15,
                           letterSpacing: 0.0,
@@ -69,8 +69,8 @@ class DetailScreen extends StatelessWidget {
       ),
       bottomNavigationBar: Container(
           height: 70,
-          padding: EdgeInsets.only(top: 10, bottom: 10, right: 20, left: 20),
-          decoration: BoxDecoration(
+          padding: const EdgeInsets.only(top: 10, bottom: 10, right: 20, left: 20),
+          decoration: const BoxDecoration(
               color: Color(0xffEC9F87),
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(15),
@@ -82,8 +82,8 @@ class DetailScreen extends StatelessWidget {
               children: [
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xffFFE484), //background
-                    onPrimary: Color(0xffFFFFFF),
+                    backgroundColor: const Color(0xffFFE484), //background
+                    foregroundColor: const Color(0xffFFFFFF),
                   ),
                   child: Text(list.buttontext),
                   onPressed: () {

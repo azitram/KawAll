@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -34,7 +33,7 @@ class AboutPage extends StatelessWidget {
                 child: Container(
                   height: screenheight*(16/25),
                   width: screenwidth*(8/10),
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(40)),
                     color: Color(0xffFFFFFF),
                   ),
@@ -56,7 +55,7 @@ class AboutPage extends StatelessWidget {
                             fontSize: 20,
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.w700,
-                            color: Color(0xff5B6656),
+                            color: const Color(0xff5B6656),
                             shadows: [
                               Shadow(
                                 blurRadius: 4,
@@ -75,7 +74,7 @@ class AboutPage extends StatelessWidget {
                           left: screenwidth*(0.5/10),
                           right: screenwidth*(0.5/10),
                         ),
-                        child: Text(
+                        child: const Text(
                           "Hello world!\n"
                               "My parents named me Martiza Hanim Tsurayya, and my friends call me \"Tija,\" although I prefer \"Hanim.\" I'm currently studying at SMA Pradita Dirgantara in Solo. So far, I've learned six programming languages: HTML, CSS, JavaScript, C++, Java, and Dart, as well as certain paths like front-end, back-end, and multi-platform app development. I intend to focus on machine learning; hence, I'll be learning Python very soon.",
                           style: TextStyle(
@@ -83,7 +82,7 @@ class AboutPage extends StatelessWidget {
                             fontSize: 13,
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.w600,
-                            color: const Color(0xff5B6656),
+                            color: Color(0xff5B6656),
                           ),
                           textAlign: TextAlign.justify,
                         ),
@@ -116,14 +115,14 @@ class AboutPage extends StatelessWidget {
                                 ],
                                 color: Color(0xff788372),
                               ),
-                              child: Text(
+                              child: const Text(
                                 "next",
                                 style: TextStyle(
                                   fontFamily: 'Montserrat',
                                   fontSize: 15,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.bold,
-                                  color: const Color(0xffFFFFFF),
+                                  color: Color(0xffFFFFFF),
                                 ),
                               ),
                             ),

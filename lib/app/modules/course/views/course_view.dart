@@ -7,7 +7,6 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../../../routes/app_pages.dart';
 import '../../../utils/color.dart';
-import '../../selfdefense/selfdefense_menu/selfdefense_menu_page.dart';
 import '../controllers/course_controller.dart';
 
 class CourseView extends GetView<CourseController> {

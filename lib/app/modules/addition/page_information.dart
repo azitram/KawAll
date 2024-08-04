@@ -1,6 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:kaw_all/app/modules/addition/page_about.dart';
+import 'package:get/get.dart';
+
+import '../../routes/app_pages.dart';
 
 class InformationPage extends StatelessWidget {
   const InformationPage({Key? key}) : super(key: key);
@@ -32,7 +33,7 @@ class InformationPage extends StatelessWidget {
                 child: Container(
                   height: screenheight*(16/25),
                   width: screenwidth*(8/10),
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(40)),
                     color: Color(0xffFFFFFF),
                   ),
@@ -54,7 +55,7 @@ class InformationPage extends StatelessWidget {
                             fontSize: 20,
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.w700,
-                            color: Color(0xff5B6656),
+                            color: const Color(0xff5B6656),
                             shadows: [
                               Shadow(
                                 blurRadius: 4,
@@ -73,14 +74,14 @@ class InformationPage extends StatelessWidget {
                           left: screenwidth*(0.5/10),
                           right: screenwidth*(0.5/10),
                         ),
-                        child: Text(
+                        child: const Text(
                           "\"KawAll\" (pronounced: ka-wal) is an online-based application that aims to guard its users from side effects and the likelihood of sexual crimes by implementing preventive and protective measures as well as recovery in the form of a flexible yet convenient application that is accessible to anyone.",
                           style: TextStyle(
                             height: 1.5,
                             fontFamily: 'Montserrat',
                             fontSize: 13,
                             fontWeight: FontWeight.w600,
-                            color: const Color(0xff5B6656),
+                            color: Color(0xff5B6656),
                           ),
                           textAlign: TextAlign.justify,
                         ),
@@ -94,33 +95,35 @@ class InformationPage extends StatelessWidget {
                         ),
                         child: Align(
                           alignment: Alignment.centerRight,
-                          child: Container(
-                            child: ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30),
+                          child: GestureDetector(
+                            onTap: () => Get.toNamed(Routes.WELCOME),
+                            child: Container(
+                              alignment: Alignment.center,
+                              width: 115,
+                              height: 35,
+                              decoration: const BoxDecoration(
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(30),
                                 ),
-                                primary: Color(0xff788372), //background
-                                onPrimary: Color(0xffFFFFFF),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.white,
+                                    offset: Offset(3.0, 3.0),
+                                    blurRadius: 15.0,
+                                  ),
+                                ],
+                                color: Color(0xff788372),
                               ),
-                              child: Text(
+                              child: const Text(
                                 "next",
                                 style: TextStyle(
-                                  fontSize: 15,
                                   fontFamily: 'Montserrat',
-                                  fontWeight: FontWeight.bold,
+                                  fontSize: 15,
                                   letterSpacing: 0.0,
-                                  shadows: [
-                                    Shadow(
-                                      blurRadius: 15.0,
-                                      color: Colors.white.withOpacity(0.3),
-                                      offset: Offset(3.0, 3.0),
-                                    )],
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xffFFFFFF),
                                 ),
                               ),
-                              onPressed: () {
-                                Navigator.push(context, MaterialPageRoute(builder: (context) => AboutPage()));
-                              },
                             ),
                           ),
                         ),

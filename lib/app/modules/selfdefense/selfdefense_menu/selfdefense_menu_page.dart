@@ -26,10 +26,10 @@ class _SelfDefenseMenuState extends State<SelfDefenseMenu> {
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             title: const Text('Self Defense Course'),
-            backgroundColor: Color(0xff7fa291),
+            backgroundColor: const Color(0xff7fa291),
             elevation: 22,
-            shadowColor: Color(0xffAFC5A5),
-            shape: RoundedRectangleBorder(
+            shadowColor: const Color(0xffAFC5A5),
+            shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(30),
                     bottomRight: Radius.circular(30)
@@ -48,7 +48,7 @@ class _SelfDefenseMenuState extends State<SelfDefenseMenu> {
                       }));
                     },
                     child: Card(
-                      shape: RoundedRectangleBorder(
+                      shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(20))
                       ),
                       child: Row(
@@ -57,7 +57,7 @@ class _SelfDefenseMenuState extends State<SelfDefenseMenu> {
                           Expanded(
                             flex: 2,
                             child: ClipRRect(
-                              borderRadius: BorderRadius.only(
+                              borderRadius: const BorderRadius.only(
                                 topLeft: Radius.circular(20),
                                 bottomLeft: Radius.circular(20),
                               ),

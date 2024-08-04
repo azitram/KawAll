@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:kaw_all/app/modules/selfdefense/selfdefense_menu/selfdefense_menu_page.dart';
 
 import '../modules/bayar_chat/bindings/bayar_chat_binding.dart';
 import '../modules/bayar_chat/views/bayar_chat_view.dart';

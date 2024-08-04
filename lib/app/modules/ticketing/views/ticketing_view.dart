@@ -9,6 +9,7 @@ import 'package:intl/intl.dart';
 import '../../../routes/app_pages.dart';
 import '../controllers/ticketing_controller.dart';
 
+
 class TicketingView extends GetView<TicketingController> {
   const TicketingView({Key? key}) : super(key: key);
   @override
@@ -138,11 +139,11 @@ class TicketingView extends GetView<TicketingController> {
               backgroundColor: const Color(0xffDCE3D9),
               selectedColor: const Color(0xffA39E9E),
               onDateSelected: (date) {
-                controller.date.value = DateTime.parse(date);
+                controller.date.value = date;
                 controller.day.value = DateFormat('EEEE, d MMM yyyy')
-                    .format(controller.date.value);
+                    .format(date);
                 controller.dayName.value =
-                    DateFormat('EEEE').format(controller.date.value);
+                    DateFormat('EEEE').format(date);
               },
             ),
             const Spacer(),

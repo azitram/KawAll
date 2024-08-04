@@ -54,7 +54,7 @@ class _FakeCallDetailState extends State<FakeCallDetail>{
                 right: 0,
                 child: AppBar(
                   leading: IconButton(
-                    icon: Icon(Icons.arrow_back_ios,),
+                    icon: const Icon(Icons.arrow_back_ios,),
                     /*{
                       advancedPlayer.pause();
                       Navigator.of(context).pop();
@@ -71,7 +71,7 @@ class _FakeCallDetailState extends State<FakeCallDetail>{
             Positioned(
               top: screenHeight*(18/25),
               child: Container(
-                  color: Color(0xffFEFEFE),
+                  color: const Color(0xffFEFEFE),
                   height: screenHeight*(7/25),
                   width: screenWidth,
                   child: Column(

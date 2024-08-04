@@ -9,34 +9,22 @@ class CourseController extends GetxController {
       'courseBackground': 'assets/images/first_course_card.png',
       'courseTitle': 'Self\nDefense',
       'courseIcon': 'assets/images/first_course_icon.png',
-      'page': SelfDefenseMenu(),
+      'page': const SelfDefenseMenu(),
     },
     {
       'courseBackground': 'assets/images/second_course_card.png',
       'courseTitle': 'All About\nSexual Abuse',
       'courseIcon': 'assets/images/second_course_icon.png',
-      'page': AllAboutSexualAbuseMenu(),
+      'page': const AllAboutSexualAbuseMenu(),
     },
     {
       'courseBackground': 'assets/images/third_course_card.png',
       'courseTitle': 'Support\nSystem',
       'courseIcon': 'assets/images/third_course_icon.png',
-      'page': SupportSystemMenu(),
+      'page': const SupportSystemMenu(),
     },
   ];
 
-  @override
-  void onInit() {
-    super.onInit();
-  }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
 }

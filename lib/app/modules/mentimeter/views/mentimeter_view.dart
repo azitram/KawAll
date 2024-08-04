@@ -3,10 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
 import 'package:kaw_all/app/modules/order_history/views/order_history_view.dart';
-import 'package:url_launcher/url_launcher.dart';
 
-import '../../../routes/app_pages.dart';
-import '../../fake_call/fake_call_menu/fake_call_menu_page.dart';
 import '../../kolak/views/kolak_view.dart';
 import '../../panas/views/panas_view.dart';
 import '../controllers/mentimeter_controller.dart';
@@ -83,7 +80,7 @@ class MentimeterView extends GetView<MentimeterController> {
                               fontFamily: 'JosefinSans',
                               fontSize: 20.sp,
                               fontWeight: FontWeight.bold,
-                              color: Color(0xffD80000),
+                              color: const Color(0xffD80000),
                               shadows: [
                                 Shadow(
                                   color: const Color(0xff000000)
@@ -104,7 +101,7 @@ class MentimeterView extends GetView<MentimeterController> {
                             children: [
                               GestureDetector(
                                 onTap: (){
-                                  Get.to(PanasView());
+                                  Get.to(const PanasView());
                                 },
                                 child: Container(
                                   width: 328.w,
@@ -142,7 +139,7 @@ class MentimeterView extends GetView<MentimeterController> {
                                               fontFamily: 'JosefinSans',
                                               fontSize: 30.sp,
                                               fontWeight: FontWeight.bold,
-                                              color: Color(0xffD80000),
+                                              color: const Color(0xffD80000),
                                               shadows: [
                                                 Shadow(
                                                   color: const Color(0xff000000)
@@ -199,7 +196,7 @@ class MentimeterView extends GetView<MentimeterController> {
                               ),
                               GestureDetector(
                                 onTap: (){
-                                  Get.to(KolakView());
+                                  Get.to(const KolakView());
                                 },
                                 child: Container(
                                   width: 328.w,
@@ -237,7 +234,7 @@ class MentimeterView extends GetView<MentimeterController> {
                                                 fontFamily: 'JosefinSans',
                                                 fontSize: 17.sp,
                                                 fontWeight: FontWeight.bold,
-                                                color: Color(0xffFFFEFD),
+                                                color: const Color(0xffFFFEFD),
                                                 shadows: [
                                                   Shadow(
                                                     color: const Color(0xff000000)
@@ -266,7 +263,7 @@ class MentimeterView extends GetView<MentimeterController> {
                                                       fontFamily: 'JosefinSans',
                                                       fontSize: 50.sp,
                                                       fontWeight: FontWeight.bold,
-                                                      color: Color(0xffF90000),
+                                                      color: const Color(0xffF90000),
                                                       shadows: [
                                                         Shadow(
                                                           color: const Color(0xff000000)
@@ -329,7 +326,7 @@ class MentimeterView extends GetView<MentimeterController> {
                   fontFamily: 'JosefinSans',
                   fontSize: 20.sp,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xffFFFFFF),
+                  color: const Color(0xffFFFFFF),
                   shadows: [
                     Shadow(
                       color: const Color(0xff000000)
@@ -407,7 +404,7 @@ class MentimeterView extends GetView<MentimeterController> {
                       ),
                       child: GestureDetector(
                         onTap: (){
-                          Get.to(OrderHistoryView());
+                          Get.to(const OrderHistoryView());
                         },
                         child: FittedBox(
                           child: Row(
@@ -416,7 +413,7 @@ class MentimeterView extends GetView<MentimeterController> {
                                   child: Text(
                                     "Tap Here For Full History",
                                     style: TextStyle(
-                                      color: Color(0xffFFFFFF),
+                                      color: const Color(0xffFFFFFF),
                                       fontSize: 15.sp,
                                       fontFamily: 'JosefinSans',
                                       fontWeight: FontWeight.bold,

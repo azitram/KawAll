@@ -26,10 +26,10 @@ class _SupportSystemMenuState extends State<SupportSystemMenu> {
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             title: const Text('Support System Course'),
-            backgroundColor: Color(0xffA14D4D),
+            backgroundColor: const Color(0xffA14D4D),
             elevation: 22,
-            shadowColor: Color(0xffAFC5A5),
-            shape: RoundedRectangleBorder(
+            shadowColor: const Color(0xffAFC5A5),
+            shape: const RoundedRectangleBorder(
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(30),
                     bottomRight: Radius.circular(30)
@@ -48,7 +48,7 @@ class _SupportSystemMenuState extends State<SupportSystemMenu> {
                       }));
                     },
                     child: Card(
-                      shape: RoundedRectangleBorder(
+                      shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(20))
                       ),
                       child: Row(
@@ -57,7 +57,7 @@ class _SupportSystemMenuState extends State<SupportSystemMenu> {
                           Expanded(
                             flex: 2,
                             child: ClipRRect(
-                              borderRadius: BorderRadius.only(
+                              borderRadius: const BorderRadius.only(
                                 topLeft: Radius.circular(20),
                                 bottomLeft: Radius.circular(20),
                               ),

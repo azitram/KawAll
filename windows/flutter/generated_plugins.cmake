@@ -3,15 +3,18 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
-  connectivity_plus_windows
-  dart_vlc
+  audioplayers_windows
+  cloud_firestore
+  connectivity_plus
   desktop_drop
   file_selector_windows
-  flutter_native_view
-  screen_retriever
+  firebase_auth
+  firebase_core
+  media_kit_video
+  screen_brightness_windows
+  share_plus
   thumblr_windows
   url_launcher_windows
-  window_manager
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST

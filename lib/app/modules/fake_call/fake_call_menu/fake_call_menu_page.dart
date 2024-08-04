@@ -31,7 +31,7 @@ class _FakeCallMenuState extends State<FakeCallMenu> {
                 Container(
                     height: screenheight*(3/4),
                     width: screenwidth,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(40)),
                       color: Color(0xffFFFFFF),
                     ),
@@ -44,7 +44,7 @@ class _FakeCallMenuState extends State<FakeCallMenu> {
                         ),
                         Container(
                           height: screenheight*(2/32),
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Colors.white,
                           ),
                           child: Text(
@@ -58,7 +58,7 @@ class _FakeCallMenuState extends State<FakeCallMenu> {
                                 Shadow(
                                   blurRadius: 15.0,
                                   color: Colors.black.withOpacity(0.3),
-                                  offset: Offset(0.0, 8.0),
+                                  offset: const Offset(0.0, 8.0),
                                 )],
                             ),
                           ),
@@ -66,7 +66,7 @@ class _FakeCallMenuState extends State<FakeCallMenu> {
                         SizedBox(
                           height: screenheight*(1/32),
                         ),
-                        Container(
+                        SizedBox(
                           height: screenheight/2,
                           child: PageView.builder(
                             controller: PageController(viewportFraction: 0.8),
@@ -81,7 +81,7 @@ class _FakeCallMenuState extends State<FakeCallMenu> {
                                     }));
                                   },
                                   child: Padding(
-                                      padding: EdgeInsets.only(
+                                      padding: const EdgeInsets.only(
                                         left: 10,
                                         right: 10,
                                       ),

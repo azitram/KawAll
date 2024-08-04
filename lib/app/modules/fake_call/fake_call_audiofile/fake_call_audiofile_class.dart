@@ -1,4 +1,3 @@
-import 'dart:typed_data';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -39,7 +38,7 @@ class _FakeCallAudioFileState extends State<FakeCallAudioFile> {
         });
       });
 
-      widget.player.onAudioPositionChanged.listen((Duration  p){
+      widget.player.onPositionChanged.listen((Duration  p){
         currentpos = p.inMilliseconds; //get the current position of playing audio
 
         //generating the duration label
@@ -68,82 +67,84 @@ class _FakeCallAudioFileState extends State<FakeCallAudioFile> {
     return WillPopScope (
       onWillPop: () async {
         if(isplaying || audioplayed) {
-          int result = await widget.player.stop();
-          if(result == 1){
+          await widget.player.stop();
             setState(() {
               isplaying = false;
               audioplayed = false;
             });
-          }
         }
-        return new Future.value(true);
+        return Future.value(true);
       },
       child: Column(
       children: [
-        Container(
+        SizedBox(
           height: screenDivision/5,
           child: Wrap(
             spacing: 10,
             children: [
               IconButton(
                 onPressed: () async {
-                  if(!isplaying && !audioplayed){
-                    int result = await widget.player.playBytes(audiobytes);
-                    if(result == 1){ //play success
+                  if (!isplaying && !audioplayed) {
+                    try {
+                      await widget.player.play(BytesSource(audiobytes));
                       setState(() {
                         isplaying = true;
                         audioplayed = true;
                       });
-                    }else{
-                      print("Error while playing audio.");
+                    } catch (e) {
+                      print("Error while playing audio: $e");
                     }
-                  }else if(audioplayed && !isplaying){
-                    int result = await widget.player.resume();
-                    if(result == 1){ //resume success
+                  }
+                  else if (audioplayed && !isplaying) {
+                    try {
+                      await widget.player.resume();
                       setState(() {
                         isplaying = true;
                         audioplayed = true;
                       });
-                    }else{
-                      print("Error on resume audio.");
+                    } catch (e) {
+                      print("Error on resume audio: $e");
                     }
-                  }else{
-                    int result = await widget.player.pause();
-                    if(result == 1){ //pause success
+                  }
+                  else {
+                    try {
+                      await widget.player.pause();
                       setState(() {
                         isplaying = false;
                       });
-                    }else{
-                      print("Error on pause audio.");
+                    } catch (e) {
+                      print("Error on pause audio: $e");
                     }
                   }
                 },
                 icon: Icon(isplaying?Icons.pause_circle_filled:Icons.play_circle_fill),
                 iconSize: (screenDivision/5)*(5/6),
-                color: Color(0xff7D7A7A),
+                color: const Color(0xff7D7A7A),
               ),
             ],
           ),
         ),
-        Container(
+        SizedBox(
             height: screenDivision/5,
             child: Slider(
-              activeColor: Color(0xff646060),
-              inactiveColor: Color(0xffD9D9D9),
+              activeColor: const Color(0xff646060),
+              inactiveColor: const Color(0xffD9D9D9),
               value: double.parse(currentpos.toString()),
               min: 0,
               max: double.parse(maxduration.toString()),
               divisions: maxduration,
               label: currentpostlabel,
-              onChanged: (double value) async {
-                int seekval = value.round();
-                int result = await widget.player.seek(Duration(milliseconds: seekval));
-                if(result == 1){ //seek successful
-                  currentpos = seekval;
-                }else{
-                  print("Seek unsuccessful.");
-                }
-              },
+                onChanged: (double value) async {
+                  try {
+                    int seekval = value.round();
+                    await widget.player.seek(Duration(milliseconds: seekval));
+                    setState(() {
+                      currentpos = seekval;
+                    });
+                  } catch (e) {
+                    print("Seek unsuccessful: $e");
+                  }
+                },
             )
         ),
         Container(
@@ -157,20 +158,20 @@ class _FakeCallAudioFileState extends State<FakeCallAudioFile> {
               ),
               IconButton(
                 onPressed: () async {
-                  int result = await widget.player.stop();
-                  if(result == 1){ //stop success
+                  try {
+                    await widget.player.stop();
                     setState(() {
                       isplaying = false;
                       audioplayed = false;
                       currentpos = 0;
                     });
-                  }else{
-                    print("Error on stop audio.");
+                  } catch (e) {
+                    print("Error on stop audio: $e");
                   }
                 },
-                icon: Icon(Icons.replay_circle_filled_rounded),
+                icon: const Icon(Icons.replay_circle_filled_rounded),
                 iconSize: (screenDivision/5)*(3/5),
-                color: Color(0xff7D7A7A),
+                color: const Color(0xff7D7A7A),
               ),
             ],
           ),

@@ -2,7 +2,6 @@ import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../routes/app_pages.dart';
@@ -146,7 +145,7 @@ class DashboardView extends GetView<DashboardController> {
                       children: [
                         GestureDetector(
                           onTap: (){
-                            Get.to(FakeCallMenu());
+                            Get.to(const FakeCallMenu());
                           },
                         child: Container(
                           width: 370.w,
@@ -190,11 +189,11 @@ class DashboardView extends GetView<DashboardController> {
                               ).paddingSymmetric(
                                   horizontal: 23.w, vertical: 19.h),
                               Flexible(
-                                child: Column(
+                                child: const Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
-                                  children: const [
+                                  children: [
                                     Text(
                                       "Mau jalan sendirian tapi takut?",
                                       style: TextStyle(
@@ -437,7 +436,10 @@ class DashboardView extends GetView<DashboardController> {
                             },
                             child: const Text(
                               "Lihat List Psikolog",
-                              style: TextStyle(fontFamily: 'JosefinSans'),
+                              style: TextStyle(
+                                fontFamily: 'JosefinSans',
+                                color: Color(0xFFFFFFFF),
+                              ),
                             ),
                           ).paddingOnly(left: 36.w),
                           ElevatedButton(
@@ -457,7 +459,10 @@ class DashboardView extends GetView<DashboardController> {
                             },
                             child: const Text(
                               "Lihat Konselor Relawan",
-                              style: TextStyle(fontFamily: 'JosefinSans'),
+                              style: TextStyle(
+                                fontFamily: 'JosefinSans',
+                                color: Color(0xFFFFFFFF),
+                              ),
                             ),
                           ).paddingOnly(left: 36.w),
                         ],

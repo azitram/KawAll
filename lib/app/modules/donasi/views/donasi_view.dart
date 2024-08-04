@@ -127,7 +127,7 @@ class DonasiView extends GetView<DonasiController> {
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: const Color(0xffBE5F5F),
+                  backgroundColor: const Color(0xffBE5F5F),
                   minimumSize: Size(165.w, 60.h),
                   elevation: 0,
                   shape: const RoundedRectangleBorder(

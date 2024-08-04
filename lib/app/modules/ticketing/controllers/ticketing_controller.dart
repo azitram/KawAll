@@ -5,8 +5,8 @@ import 'package:intl/intl.dart';
 
 class TicketingController extends GetxController {
   final date = DateTime.now().obs;
-  final day = "".obs;
-  final dayName = "".obs;
+  final day = ''.obs;
+  final dayName = ''.obs;
   User? user = FirebaseAuth.instance.currentUser;
 
   final konselingRef = FirebaseFirestore.instance.collection("konseling");

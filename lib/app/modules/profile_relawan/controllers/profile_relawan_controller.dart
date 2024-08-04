@@ -5,7 +5,7 @@ import '../../pilih_psikolog/models/psikolog_model.dart';
 
 class ProfileRelawanController extends GetxController {
   final focusItemCard = 0.obs;
-  final color = Color(0xFF000000).obs;
+  final color = const Color(0xFF000000).obs;
 
   final name = "".obs;
   final price = 0.obs;

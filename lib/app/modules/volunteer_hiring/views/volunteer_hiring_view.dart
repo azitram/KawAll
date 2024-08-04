@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:get/get.dart';
-import 'package:kaw_all/app/routes/app_pages.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../controllers/volunteer_hiring_controller.dart';
@@ -111,7 +110,7 @@ class VolunteerHiringView extends GetView<VolunteerHiringController> {
                   Uri.parse("https://nffoq0ghbqu.typeform.com/to/fmMMUMrk"),
                 ),
                 style: ElevatedButton.styleFrom(
-                  primary: const Color(0xffBE5F5F),
+                  backgroundColor: const Color(0xffBE5F5F),
                   minimumSize: Size(225.w, 61.h),
                   elevation: 0,
                   shape: const RoundedRectangleBorder(

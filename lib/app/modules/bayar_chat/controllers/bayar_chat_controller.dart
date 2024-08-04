@@ -31,20 +31,8 @@ class BayarChatController extends GetxController {
     },
   ];
 
-  @override
-  void onInit() {
-    super.onInit();
-  }
 
-  @override
-  void onReady() {
-    super.onReady();
-  }
 
-  @override
-  void onClose() {
-    super.onClose();
-  }
 
   final docRef = FirebaseFirestore.instance.collection('users');
   User? user = FirebaseAuth.instance.currentUser;

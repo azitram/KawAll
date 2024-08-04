@@ -70,7 +70,7 @@ class PelaporanView extends GetView<PelaporanController> {
                           fontFamily: 'JosefinSans',
                           fontSize: 25.sp,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xffA14D4D),
+                          color: const Color(0xffA14D4D),
                           shadows: [
                             Shadow(
                               blurRadius: 4,
@@ -184,7 +184,7 @@ class CustomCard extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () => Get.toNamed(Routes.COMING_SOON),
               style: ElevatedButton.styleFrom(
-                primary: const Color(0xffEC9F87),
+                backgroundColor: const Color(0xffEC9F87),
                 minimumSize: Size(106.w, 40.h),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50),

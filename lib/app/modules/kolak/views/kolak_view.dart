@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:kaw_all/app/modules/payment/views/payment_view.dart';
 import '../../../routes/app_pages.dart';
 
 import 'package:get/get.dart';
